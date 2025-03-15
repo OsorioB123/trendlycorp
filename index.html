@@ -107,8 +107,6 @@
         justify-content: center;
         padding: 2rem;
       }
-      
-      
       .hero-content {
         position: relative;
         z-index: 2;
@@ -148,7 +146,13 @@
         padding: 4rem 2rem;
         overflow: hidden;
       }
-     
+      .simple-overlay {
+        /* Se quiser overlay, pode adicionar estilo aqui, ex.:
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        */
+      }
       .simple-content {
         position: relative;
         z-index: 2;
@@ -482,7 +486,6 @@
         color: #ff5555;
         font-weight: normal;
       }
-
       /* Caixa de Período de Teste Grátis */
       .trial-box {
         background: #111;
@@ -523,7 +526,6 @@
         line-height: 1.4;
         margin-bottom: 1rem;
       }
-
       /* Responsividade para a seção 7 */
       @media (max-width: 768px) {
         .seventh-content {
@@ -767,7 +769,6 @@
               dinheiro usando apenas o seu celular, sem precisar aparecer.
             </p>
           </div>
-
           <!-- Card 3 -->
           <div class="card">
             <h3><i class="fas fa-route"></i> Passo a Passo</h3>
@@ -779,7 +780,7 @@
           <!-- Card 4 -->
           <div class="card">
             <h3><i class="fas fa-lock-open"></i> Monetizando as Redes</h3>
-            <p>Tutorial de como usar as redes sociais ganhar dinheiro.</p>
+            <p>Tutorial de como usar as redes sociais para ganhar dinheiro.</p>
           </div>
           <!-- Card 5 -->
           <div class="card">
@@ -831,6 +832,7 @@
         >
       </div>
     </section>
+
     <!-- SEÇÃO 7: OFERTA E TESTE GRÁTIS -->
     <section class="seventh-section">
       <div class="seventh-content">
@@ -851,91 +853,96 @@
           >
         </div>
 
-<!-- Caixa de Premiação da Trupe do Bilas -->
-<div class="offer-box">
-  <h2>PREMIAÇÃO IMPERDÍVEL!</h2>
-  <!-- "offer-description" opcional, se quiser um texto introdutório -->
-  <p class="offer-description">
-    Participe agora da <strong>Trupe do Bilas</strong> e concorra a prêmios
-    incríveis enquanto lucra com seus cortes!
-  </p>
-  <!-- Aqui usamos "offer-price" para replicar o estilo de preço -->
-  <div class="offer-price">
-    🏆 <strong>PREMIAÇÃO FINAL:</strong> R$ 8.850,00<br />
-    💰 <strong>PREMIAÇÃO DIÁRIA:</strong> R$ 6.500,00<br />
-    🎟️ <strong>SORTEIO DIÁRIO:</strong> R$ 1.050,00<br />
-    🤝 <strong>PREMIAÇÃO POR INDICAÇÃO:</strong> R$ 5,00 por indicado
-  </div>
-  <a href="#formulario" class="seventh-button">QUERO PARTICIPAR AGORA!</a>
-</div>
-
-<!-- SEÇÃO 8: FAQ -->
-<section class="faq-section">
-  <div class="faq-content">
-    <h2>FAQ</h2>
-    <p class="faq-subtitle">Perguntas Frequentes</p>
-
-    <!-- FAQ Item 1 -->
-    <div class="faq-item">
-      <button class="faq-question">
-        Quanto preciso pagar?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>
-          O acesso é totalmente gratuito por tempo limitado. Não há taxas ocultas.
-        </p>
+        <!-- Caixa de Premiação da Trupe do Bilas -->
+        <div class="offer-box">
+          <h2>PREMIAÇÃO IMPERDÍVEL!</h2>
+          <p class="offer-description">
+            Participe agora da <strong>Trupe do Bilas</strong> e concorra a
+            prêmios incríveis enquanto lucra com seus cortes!
+          </p>
+          <div class="offer-price">
+            🏆 <strong>PREMIAÇÃO FINAL:</strong> R$ 8.850,00<br />
+            💰 <strong>PREMIAÇÃO DIÁRIA:</strong> R$ 6.500,00<br />
+            🎟️ <strong>SORTEIO DIÁRIO:</strong> R$ 1.050,00<br />
+            🤝 <strong>PREMIAÇÃO POR INDICAÇÃO:</strong> R$ 5,00 por indicado
+          </div>
+          <a href="#formulario" class="seventh-button"
+            >QUERO PARTICIPAR AGORA!</a
+          >
+        </div>
       </div>
-    </div>
+    </section>
+    <!-- Fechamos a seventh-section corretamente antes de iniciar a FAQ -->
 
-    <!-- FAQ Item 2 -->
-    <div class="faq-item">
-      <button class="faq-question">
-        E se eu nunca editei vídeos antes?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>
-          Não tem problema! Toda a comunidade foi construída para iniciantes, 
-          com vídeo aulas, tutoriais práticos e mentorias.
-        </p>
+    <!-- SEÇÃO 8: FAQ -->
+    <section class="faq-section">
+      <div class="faq-content">
+        <h2>FAQ</h2>
+        <p class="faq-subtitle">Perguntas Frequentes</p>
+
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Quanto preciso pagar?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              O acesso é totalmente gratuito por tempo limitado. Não há taxas
+              ocultas.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            E se eu nunca editei vídeos antes?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Não tem problema! Toda a comunidade foi construída para iniciantes,
+              com vídeo aulas, tutoriais práticos e mentorias.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            Como ganho dinheiro com isso?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Você aprenderá estratégias para editar cortes e publicá-los em
+              plataformas que pagam por visualizações, e terá acesso exclusivo
+              às competições e premiações diárias.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            E se eu precisar de suporte?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Dentro da comunidade da Trupe, você pode tirar dúvidas tanto com a
+              equipe quanto com outros membros mais experientes.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA ao final do FAQ -->
+        <div class="faq-cta">
+          <a href="#formulario" class="faq-button">QUERO LUCRAR COM CORTES</a>
+        </div>
       </div>
-    </div>
-
-    <!-- FAQ Item 3 -->
-    <div class="faq-item">
-      <button class="faq-question">
-        Como ganho dinheiro com isso?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>
-          Você aprenderá estratégias para editar cortes e publicá-los em plataformas 
-          que pagam por visualizações, e terá acesso exclusivo às competições e premiações diárias.
-        </p>
-      </div>
-    </div>
-
-    <!-- FAQ Item 4 (CORRIGIDO) -->
-    <div class="faq-item">
-      <button class="faq-question">
-        E se eu precisar de suporte?
-        <span class="faq-icon">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>
-          Dentro da comunidade da Trupe, você pode tirar dúvidas tanto com a 
-          equipe quanto com outros membros mais experientes.
-        </p>
-      </div>
-    </div>
-
-    <!-- CTA ao final do FAQ -->
-    <div class="faq-cta">
-      <a href="#formulario" class="faq-button">QUERO LUCRAR COM CORTES</a>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- SEÇÃO 9: FORMULÁRIO -->
     <section id="formulario" class="form-section">
@@ -983,19 +990,17 @@
         faqItems.forEach((item) => {
           const questionBtn = item.querySelector(".faq-question");
           questionBtn.addEventListener("click", () => {
+            // Fecha os outros itens antes de abrir o clicado
             faqItems.forEach((i) => {
               if (i !== item) {
                 i.classList.remove("active");
                 i.querySelector(".faq-icon").textContent = "+";
               }
             });
+            // Alterna o item atual
             item.classList.toggle("active");
             const icon = item.querySelector(".faq-icon");
-            if (item.classList.contains("active")) {
-              icon.textContent = "–";
-            } else {
-              icon.textContent = "+";
-            }
+            icon.textContent = item.classList.contains("active") ? "–" : "+";
           });
         });
       });
