@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fique Rico com Cortes</title>
+    <!-- Redirecionamento via History API para alterar a URL sem recarregar -->
+    <script>
+      // Se o usuário estiver na raiz, altera a URL para /lp-trupe-discord
+      if (window.location.pathname === "/") {
+        window.history.replaceState({}, document.title, "/lp-trupe-discord");
+      }
+    </script>
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -14,7 +21,6 @@
       html {
         scroll-behavior: smooth;
       }
-
       /* Reset básico */
       * {
         margin: 0;
@@ -22,13 +28,11 @@
         box-sizing: border-box;
       }
       body {
-        /* Fonte atualizada para sistema, inspirada na Apple */
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        background-color: #000; /* Fundo geral do site */
-        color: #fff; /* Cor do texto padrão */
+        background-color: #000;
+        color: #fff;
       }
-
       /* =========================== */
       /* Botões Comum - Voltados para Verde */
       /* =========================== */
@@ -64,17 +68,10 @@
         background: #35aa47;
       }
       @keyframes pulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(60, 189, 81, 0.7);
-        }
-        70% {
-          box-shadow: 0 0 0 20px rgba(60, 189, 81, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(60, 189, 81, 0);
-        }
+        0% { box-shadow: 0 0 0 0 rgba(60, 189, 81, 0.7); }
+        70% { box-shadow: 0 0 0 20px rgba(60, 189, 81, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(60, 189, 81, 0); }
       }
-
       /* Botão do formulário */
       .btn-form {
         display: inline-block;
@@ -92,14 +89,12 @@
         transform: scale(1.05);
         background: #35aa47;
       }
-
       /* =========================== */
       /* SEÇÃO 1: HERO              */
       /* =========================== */
       .hero-section {
         position: relative;
-        background: url("https://i.imgur.com/aOFs3k8.png") no-repeat center
-          center;
+        background: url("https://i.imgur.com/aOFs3k8.png") no-repeat center center;
         background-size: cover;
         min-height: 100vh;
         display: flex;
@@ -127,32 +122,20 @@
         margin-bottom: 2rem;
       }
       @media (max-width: 768px) {
-        .hero-content h1 {
-          font-size: 2rem;
-        }
-        .hero-content p {
-          font-size: 1rem;
-        }
+        .hero-content h1 { font-size: 2rem; }
+        .hero-content p { font-size: 1rem; }
       }
-
       /* =========================== */
       /* SEÇÃO 2: SIMPLES SECTION   */
       /* =========================== */
       .simple-section {
         position: relative;
-        background: url("https://i.imgur.com/tFkQ2sZ.png") no-repeat center
-          center;
+        background: url("https://i.imgur.com/tFkQ2sZ.png") no-repeat center center;
         background-size: cover;
         padding: 4rem 2rem;
         overflow: hidden;
       }
-      .simple-overlay {
-        /* Se quiser overlay, pode adicionar estilo aqui, ex.:
-        background: rgba(0, 0, 0, 0.4);
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        */
-      }
+      .simple-overlay { }
       .simple-content {
         position: relative;
         z-index: 2;
@@ -161,10 +144,7 @@
         text-align: center;
         color: #fff;
       }
-      .simple-content h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-      }
+      .simple-content h2 { font-size: 2rem; margin-bottom: 1.5rem; }
       .simple-box {
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -173,27 +153,17 @@
         margin-bottom: 2rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
-      .simple-box p {
-        margin-bottom: 1rem;
-        font-size: 1rem;
-        line-height: 1.5;
-      }
+      .simple-box p { margin-bottom: 1rem; font-size: 1rem; line-height: 1.5; }
       @media (max-width: 768px) {
-        .simple-content h2 {
-          font-size: 1.5rem;
-        }
-        .simple-box p {
-          font-size: 0.95rem;
-        }
+        .simple-content h2 { font-size: 1.5rem; }
+        .simple-box p { font-size: 0.95rem; }
       }
-
       /* =========================== */
       /* SEÇÃO 3: LISTA COM EMOJIS  */
       /* =========================== */
       .target-section {
         position: relative;
-        background: url("https://i.imgur.com/2e4K8NG.png") no-repeat center
-          center;
+        background: url("https://i.imgur.com/2e4K8NG.png") no-repeat center center;
         background-size: cover;
         padding: 4rem 2rem;
         text-align: center;
@@ -227,23 +197,15 @@
         line-height: 1.4;
       }
       @media (max-width: 768px) {
-        .target-content h2 {
-          font-size: 1.5rem;
-        }
-        .target-content p {
-          font-size: 1rem;
-        }
-        .target-list li {
-          font-size: 0.95rem;
-        }
+        .target-content h2 { font-size: 1.5rem; }
+        .target-content p { font-size: 1rem; }
+        .target-list li { font-size: 0.95rem; }
       }
-
       /* =========================== */
       /* SEÇÃO 4: MOSTRAR O CAMINHO  */
       /* =========================== */
       .fourth-section {
-        background: url("https://i.imgur.com/2NQhMmB.png") no-repeat center
-          center;
+        background: url("https://i.imgur.com/2NQhMmB.png") no-repeat center center;
         background-size: cover;
         padding: 4rem 2rem;
         text-align: center;
@@ -279,25 +241,13 @@
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(5px);
       }
-      .fourth-box p {
-        margin-bottom: 1rem;
-        line-height: 1.5;
-      }
+      .fourth-box p { margin-bottom: 1rem; line-height: 1.5; }
       @media (max-width: 768px) {
-        .fourth-content h2 {
-          font-size: 1.5rem;
-        }
-        .fourth-subtitle {
-          font-size: 1rem;
-        }
-        .reading-time {
-          font-size: 0.9rem;
-        }
-        .fourth-box p {
-          font-size: 0.95rem;
-        }
+        .fourth-content h2 { font-size: 1.5rem; }
+        .fourth-subtitle { font-size: 1rem; }
+        .reading-time { font-size: 0.9rem; }
+        .fourth-box p { font-size: 0.95rem; }
       }
-
       /* =========================== */
       /* SEÇÃO 5: ACESSO A TUDO      */
       /* =========================== */
@@ -342,9 +292,7 @@
         margin-bottom: 0.5rem;
         font-size: 1.3rem;
       }
-      .card h3 i {
-        margin-right: 0.5rem;
-      }
+      .card h3 i { margin-right: 0.5rem; }
       .card p {
         color: #ccc;
         font-size: 1rem;
@@ -363,32 +311,18 @@
         line-height: 1.5;
       }
       @media (max-width: 768px) {
-        .cards-container {
-          flex-direction: column;
-          align-items: center;
-        }
-        .card {
-          max-width: 100%;
-          text-align: center;
-        }
-        .card h3 {
-          font-size: 1.2rem;
-        }
-        .fifth-subtitle {
-          font-size: 1.2rem;
-        }
-        .fifth-text {
-          font-size: 0.95rem;
-        }
+        .cards-container { flex-direction: column; align-items: center; }
+        .card { max-width: 100%; text-align: center; }
+        .card h3 { font-size: 1.2rem; }
+        .fifth-subtitle { font-size: 1.2rem; }
+        .fifth-text { font-size: 0.95rem; }
       }
-
       /* =========================== */
       /* SEÇÃO 6: TRANSFORMAÇÃO (IMAGEM DE FUNDO) */
       /* =========================== */
       .sixth-section {
         position: relative;
-        background: url("https://i.imgur.com/8VnDRiU.png") no-repeat center
-          center;
+        background: url("https://i.imgur.com/8VnDRiU.png") no-repeat center center;
         background-size: cover;
         padding: 4rem 2rem;
       }
@@ -426,21 +360,12 @@
         font-weight: bold;
         color: #ffd700;
       }
-      .sixth-button {
-        margin-top: 1rem;
-      }
+      .sixth-button { margin-top: 1rem; }
       @media (max-width: 768px) {
-        .sixth-content {
-          text-align: center;
-        }
-        .sixth-content h2 {
-          font-size: 1.5rem;
-        }
-        .sixth-highlight {
-          font-size: 1.1rem;
-        }
+        .sixth-content { text-align: center; }
+        .sixth-content h2 { font-size: 1.5rem; }
+        .sixth-highlight { font-size: 1.1rem; }
       }
-
       /* =========================== */
       /* SEÇÃO 7: OFERTA E TESTE GRÁTIS */
       /* =========================== */
@@ -513,9 +438,7 @@
         color: #ff9900;
         text-align: center;
       }
-      .trial-days small {
-        font-size: 0.7rem;
-      }
+      .trial-days small { font-size: 0.7rem; }
       .trial-box h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
@@ -526,25 +449,17 @@
         line-height: 1.4;
         margin-bottom: 1rem;
       }
-      /* Responsividade para a seção 7 */
       @media (max-width: 768px) {
         .seventh-content {
           flex-direction: column;
           align-items: center;
         }
         .offer-box,
-        .trial-box {
-          max-width: 100%;
-        }
+        .trial-box { max-width: 100%; }
         .offer-box h2,
-        .trial-box h3 {
-          font-size: 1.5rem;
-        }
-        .offer-box .offer-price {
-          font-size: 1.2rem;
-        }
+        .trial-box h3 { font-size: 1.5rem; }
+        .offer-box .offer-price { font-size: 1.2rem; }
       }
-
       /* =========================== */
       /* SEÇÃO 8: FAQ               */
       /* =========================== */
@@ -590,10 +505,7 @@
         justify-content: space-between;
         align-items: center;
       }
-      .faq-icon {
-        font-size: 1.5rem;
-        margin-left: 1rem;
-      }
+      .faq-icon { font-size: 1.5rem; margin-left: 1rem; }
       .faq-answer {
         display: none;
         background: #fff;
@@ -602,22 +514,12 @@
         line-height: 1.5;
         font-size: 1rem;
       }
-      .faq-item.active .faq-answer {
-        display: block;
-      }
-      .faq-cta {
-        text-align: center;
-        margin-top: 2rem;
-      }
+      .faq-item.active .faq-answer { display: block; }
+      .faq-cta { text-align: center; margin-top: 2rem; }
       @media (max-width: 768px) {
-        .faq-content {
-          padding: 0 1rem;
-        }
-        .faq-subtitle {
-          font-size: 1rem;
-        }
+        .faq-content { padding: 0 1rem; }
+        .faq-subtitle { font-size: 1rem; }
       }
-
       /* =========================== */
       /* SEÇÃO 9: FORMULÁRIO        */
       /* =========================== */
@@ -630,10 +532,7 @@
         max-width: 600px;
         margin: 0 auto;
       }
-      .form-content h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-      }
+      .form-content h2 { font-size: 2rem; margin-bottom: 2rem; }
       .cta-form input {
         width: 100%;
         padding: 1rem;
@@ -642,13 +541,8 @@
         border-radius: 4px;
         font-size: 1rem;
       }
-      .cta-form button {
-        margin-top: 0.5rem;
-      }
-      .vagas-info {
-        margin-top: 1rem;
-        font-size: 0.9rem;
-      }
+      .cta-form button { margin-top: 0.5rem; }
+      .vagas-info { margin-top: 1rem; font-size: 0.9rem; }
     </style>
   </head>
   <body>
@@ -872,8 +766,6 @@
         </div>
       </div>
     </section>
-    <!-- Fechamos a seventh-section corretamente antes de iniciar a FAQ -->
-
     <!-- SEÇÃO 8: FAQ -->
     <section class="faq-section">
       <div class="faq-content">
@@ -990,14 +882,12 @@
         faqItems.forEach((item) => {
           const questionBtn = item.querySelector(".faq-question");
           questionBtn.addEventListener("click", () => {
-            // Fecha os outros itens antes de abrir o clicado
             faqItems.forEach((i) => {
               if (i !== item) {
                 i.classList.remove("active");
                 i.querySelector(".faq-icon").textContent = "+";
               }
             });
-            // Alterna o item atual
             item.classList.toggle("active");
             const icon = item.querySelector(".faq-icon");
             icon.textContent = item.classList.contains("active") ? "–" : "+";
