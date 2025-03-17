@@ -109,11 +109,11 @@
         line-height: 1.2;
         text-transform: uppercase;
       }
-      /* Estilização do vídeo */
+      /* Estilização do vídeo com tamanho aumentado */
       .hero-content iframe {
         width: 100%;
-        max-width: 560px;
-        height: 315px;
+        max-width: 800px;
+        height: 450px;
         margin: 1rem auto;
         display: block;
         border: none;
@@ -161,7 +161,390 @@
         .simple-box p { font-size: 0.95rem; }
       }
       /* =========================== */
-      /* O restante do CSS permanece inalterado... */
+      /* SEÇÃO 3: LISTA COM EMOJIS  */
+      /* =========================== */
+      .target-section {
+        position: relative;
+        background: url("https://i.imgur.com/2e4K8NG.png") no-repeat center center;
+        background-size: cover;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      .target-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .target-content h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #ff9900;
+      }
+      .target-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #fff;
+      }
+      .target-list {
+        list-style: none;
+        margin: 0 auto 2rem;
+        padding: 0;
+        max-width: 600px;
+        text-align: left;
+      }
+      .target-list li {
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+      @media (max-width: 768px) {
+        .target-content h2 { font-size: 1.5rem; }
+        .target-content p { font-size: 1rem; }
+        .target-list li { font-size: 0.95rem; }
+      }
+      /* =========================== */
+      /* SEÇÃO 4: MOSTRAR O CAMINHO  */
+      /* =========================== */
+      .fourth-section {
+        background: url("https://i.imgur.com/2NQhMmB.png") no-repeat center center;
+        background-size: cover;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      .fourth-content {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .fourth-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #ff9900;
+      }
+      .fourth-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .reading-time {
+        color: #ffdc00;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        font-weight: bold;
+      }
+      .fourth-box {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-left: 5px solid #ff9900;
+        border-radius: 12px;
+        padding: 2.5rem;
+        margin: 2rem auto;
+        text-align: left;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+      }
+      .fourth-box p { margin-bottom: 1rem; line-height: 1.5; }
+      @media (max-width: 768px) {
+        .fourth-content h2 { font-size: 1.5rem; }
+        .fourth-subtitle { font-size: 1rem; }
+        .reading-time { font-size: 0.9rem; }
+        .fourth-box p { font-size: 0.95rem; }
+      }
+      /* =========================== */
+      /* SEÇÃO 5: ACESSO A TUDO      */
+      /* =========================== */
+      .fifth-section {
+        background: #000;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      .fifth-content {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .fifth-content h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #ff9900;
+      }
+      .cards-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+      .card {
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 1.5rem;
+        flex: 1 1 220px;
+        max-width: 250px;
+        text-align: left;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+      .card h3 {
+        color: #ff9900;
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+      }
+      .card h3 i { margin-right: 0.5rem; }
+      .card p {
+        color: #ccc;
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+      .fifth-subtitle {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      .fifth-text {
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        font-size: 1rem;
+        color: #ccc;
+        line-height: 1.5;
+      }
+      @media (max-width: 768px) {
+        .cards-container { flex-direction: column; align-items: center; }
+        .card { max-width: 100%; text-align: center; }
+        .card h3 { font-size: 1.2rem; }
+        .fifth-subtitle { font-size: 1.2rem; }
+        .fifth-text { font-size: 0.95rem; }
+      }
+      /* =========================== */
+      /* SEÇÃO 6: TRANSFORMAÇÃO (IMAGEM DE FUNDO) */
+      /* =========================== */
+      .sixth-section {
+        position: relative;
+        background: url("https://i.imgur.com/8VnDRiU.png") no-repeat center center;
+        background-size: cover;
+        padding: 4rem 2rem;
+      }
+      .sixth-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+      .sixth-content {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .sixth-content h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #ff9900;
+      }
+      .sixth-content p {
+        margin-bottom: 1rem;
+        line-height: 1.5;
+        font-size: 1rem;
+      }
+      .sixth-highlight {
+        display: inline-block;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #ffd700;
+      }
+      .sixth-button { margin-top: 1rem; }
+      @media (max-width: 768px) {
+        .sixth-content { text-align: center; }
+        .sixth-content h2 { font-size: 1.5rem; }
+        .sixth-highlight { font-size: 1.1rem; }
+      }
+      /* =========================== */
+      /* SEÇÃO 7: OFERTA E TESTE GRÁTIS */
+      /* =========================== */
+      .seventh-section {
+        background: #000;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      .seventh-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+      }
+      /* Caixa de Oferta */
+      .offer-box {
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 2rem;
+        flex: 1 1 300px;
+        max-width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      .offer-box h2 {
+        color: #ff3300;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+      .offer-description {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+      }
+      .offer-price {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+      }
+      .offer-old-price {
+        text-decoration: line-through;
+        color: #ff5555;
+        font-weight: normal;
+      }
+      /* Caixa de Período de Teste Grátis */
+      .trial-box {
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 2rem;
+        flex: 1 1 300px;
+        max-width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      .trial-seal {
+        margin: 0 auto 1rem;
+        width: 100px;
+        height: 100px;
+        background: #222;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .trial-days {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #ff9900;
+        text-align: center;
+      }
+      .trial-days small { font-size: 0.7rem; }
+      .trial-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #ff9900;
+      }
+      .trial-box p {
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+      }
+      @media (max-width: 768px) {
+        .seventh-content {
+          flex-direction: column;
+          align-items: center;
+        }
+        .offer-box,
+        .trial-box { max-width: 100%; }
+        .offer-box h2,
+        .trial-box h3 { font-size: 1.5rem; }
+        .offer-box .offer-price { font-size: 1.2rem; }
+      }
+      /* =========================== */
+      /* SEÇÃO 8: FAQ               */
+      /* =========================== */
+      .faq-section {
+        background: #fff;
+        color: #000;
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+      .faq-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+      }
+      .faq-content h2 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #ff9900;
+        text-align: center;
+      }
+      .faq-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: #555;
+      }
+      .faq-item {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+      }
+      .faq-question {
+        background: #000;
+        color: #fff;
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        text-align: left;
+        font-size: 1rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .faq-icon { font-size: 1.5rem; margin-left: 1rem; }
+      .faq-answer {
+        display: none;
+        background: #fff;
+        color: #000;
+        padding: 1rem;
+        line-height: 1.5;
+        font-size: 1rem;
+      }
+      .faq-item.active .faq-answer { display: block; }
+      .faq-cta { text-align: center; margin-top: 2rem; }
+      @media (max-width: 768px) {
+        .faq-content { padding: 0 1rem; }
+        .faq-subtitle { font-size: 1rem; }
+      }
+      /* =========================== */
+      /* SEÇÃO 9: FORMULÁRIO        */
+      /* =========================== */
+      .form-section {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: #111;
+      }
+      .form-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      .form-content h2 { font-size: 2rem; margin-bottom: 2rem; }
+      .cta-form input {
+        width: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+      }
+      .cta-form button { margin-top: 0.5rem; }
+      .vagas-info { margin-top: 1rem; font-size: 0.9rem; }
     </style>
   </head>
   <body>
@@ -210,9 +593,15 @@
         <p>É para você que:</p>
         <ul class="target-list">
           <li>✅ Quer ganhar muita grana na internet apenas com o celular.</li>
-          <li>✅ Quer aprender do zero passo a passo para criar cortes monetizados.</li>
-          <li>✅ Não acredita mais em gurus, vendedores de curso e mágicas que não funcionam.</li>
-          <li>✅ Sempre quis ganhar grana com a internet, mas nunca começou.</li>
+          <li>
+            ✅ Quer aprender do zero passo a passo para criar cortes monetizados.
+          </li>
+          <li>
+            ✅ Não acredita mais em gurus, vendedores de curso e mágicas que não funcionam.
+          </li>
+          <li>
+            ✅ Sempre quis ganhar grana com a internet, mas nunca começou.
+          </li>
           <li>✅ Está cansado de perder tempo e quer começar a faturar.</li>
           <li>✅ Quer fazer mais de 15 mil reais todos os meses.</li>
         </ul>
@@ -506,3 +895,4 @@
     </script>
   </body>
 </html>
+
