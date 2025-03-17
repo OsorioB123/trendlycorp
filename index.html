@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head> 
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fique Rico com Cortes</title>
@@ -759,6 +759,7 @@
         </div>
       </div>
     </section>
+
     <!-- SEÇÃO 8: FAQ -->
     <section class="faq-section">
       <div class="faq-content">
@@ -835,8 +836,9 @@
         <h2>Inscreva-se Agora</h2>
         <form
           class="cta-form"
-<form class="cta-form" action="https://discord.gg/dagY39VREN" 
-          method="GET">
+          action="https://script.google.com/macros/s/AKfycbyS5Es0edZ5MVcnlGXp6hIHDs7f63c0TZVnrUsp7GhySODdnMz8AMJKh0xdBGrDbbRA/exec"
+          method="POST"
+        >
           <input
             type="text"
             name="nome"
@@ -884,6 +886,36 @@
             const icon = item.querySelector(".faq-icon");
             icon.textContent = item.classList.contains("active") ? "–" : "+";
           });
+        });
+      });
+    </script>
+
+    <!-- Script para enviar o formulário via AJAX e redirecionar para o Discord -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector(".cta-form");
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Impede o envio padrão do formulário
+
+          const formData = new FormData(form);
+
+          // Envia os dados para o Google Apps Script
+          fetch(form.action, {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              if (response.ok) {
+                // Redireciona para o Discord após o envio bem-sucedido
+                window.location.href = "https://discord.gg/dagY39VREN";
+              } else {
+                alert("Erro ao enviar os dados.");
+              }
+            })
+            .catch((error) => {
+              console.error("Erro:", error);
+              alert("Erro ao enviar os dados.");
+            });
         });
       });
     </script>
