@@ -107,29 +107,35 @@
       /* =========================== */
       /* SEÇÃO 1: HERO              */
       /* =========================== */
-      .hero-section {
-        position: relative;
-        background: url("https://i.imgur.com/aOFs3k8.png") no-repeat center center;
-        background-size: cover;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 2rem;
-      }
-      .hero-content {
-        position: relative;
-        z-index: 2;
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 1rem;
-      }
-      .hero-content h1 {
-        font-size: 2.8rem;
-        margin-bottom: 1rem;
-        line-height: 1.2;
-        text-transform: uppercase;
+     .hero-section {
+  position: relative;
+  background: url("https://i.imgur.com/3UKVfWJ.jpeg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
       }
       /* Estilização do vídeo com tamanho aumentado */
       .hero-content iframe {
