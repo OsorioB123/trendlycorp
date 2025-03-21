@@ -176,9 +176,7 @@
         transform: translateY(0);
       }
 
-      /* =========================== */
-      /* SEÇÃO 1: HERO              */
-      /* =========================== */
+      /* SEÇÃO 1: HERO */
       .hero-section {
         position: relative;
         background: url("https://i.imgur.com/GPfdh8E.png") no-repeat center center;
@@ -252,9 +250,7 @@
         .hero-content p { font-size: 1rem; }
       }
 
-      /* =========================== */
-      /* SEÇÃO 1.6: COMO FUNCIONA   */
-      /* =========================== */
+      /* SEÇÃO 1.6: COMO FUNCIONA */
       .how-section {
         background: var(--background);
         padding: 3rem 2rem;
@@ -278,9 +274,7 @@
         margin-right: 0.5rem;
       }
 
-      /* =========================== */
-      /* SEÇÃO 2: SIMPLES SECTION   */
-      /* =========================== */
+      /* SEÇÃO 2: SIMPLES SECTION */
       .simple-section {
         position: relative;
         background: url("https://i.imgur.com/tFkQ2sZ.png") no-repeat center center;
@@ -328,9 +322,7 @@
         .simple-box p { font-size: 0.95rem; }
       }
 
-      /* =========================== */
-      /* SEÇÃO 3: LISTA COM EMOJIS  */
-      /* =========================== */
+      /* SEÇÃO 3: LISTA COM EMOJIS */
       .target-section {
         position: relative;
         background: url("https://i.imgur.com/2e4K8NG.png") no-repeat center center;
@@ -373,23 +365,21 @@
         .target-list li { font-size: 0.95rem; }
       }
 
-      /* =========================== */
-      /* SEÇÃO 5: ACESSO A TUDO      */
-      /* =========================== */
-      .fifth-section {
-        background: var(--background);
+      /* SEÇÃO 5 & 7 UNIFICADAS: ACESSO + OFERTA E TESTE GRÁTIS */
+      .unified-section {
+        position: relative;
+        background: url("https://i.imgur.com/n0ZKBo6.jpeg") no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
         padding: 4rem 2rem;
         text-align: center;
       }
-      .fifth-content {
+      .unified-content {
         max-width: 1200px;
         margin: 0 auto;
+        color: var(--text-color);
       }
-      .fifth-content h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        color: var(--accent-color);
-      }
+      /* Mantém os estilos dos cards e ofertas */
       .cards-container {
         display: flex;
         flex-wrap: wrap;
@@ -456,22 +446,12 @@
           font-size: 0.95rem;
         }
       }
-
-      /* =========================== */
-      /* SEÇÃO 7: OFERTA E TESTE GRÁTIS */
-      /* =========================== */
-      .seventh-section {
-        background: var(--background);
-        padding: 4rem 2rem;
-        text-align: center;
-      }
       .seventh-content {
-        max-width: 1200px;
-        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
         justify-content: center;
+        margin-top: 2rem;
       }
       .offer-box {
         background: var(--secondary-bg);
@@ -517,9 +497,7 @@
         }
       }
 
-      /* =========================== */
-      /* SEÇÃO 8: FAQ               */
-      /* =========================== */
+      /* SEÇÃO 8: FAQ */
       .faq-section {
         background: #fff;
         color: #000;
@@ -588,9 +566,7 @@
         }
       }
 
-      /* =========================== */
-      /* SEÇÃO 9: FORMULÁRIO        */
-      /* =========================== */
+      /* SEÇÃO 9: FORMULÁRIO */
       .form-section {
         padding: 4rem 2rem;
         text-align: center;
@@ -647,12 +623,8 @@
     <!-- SEÇÃO 1: HERO -->
     <section id="hero" class="hero-section animate">
       <div class="hero-content">
-        <h1>
-          Faça Renda Extra em Dólar com os Vídeos da Trupe no Discord!
-        </h1>
-        <h2>
-          📱 Sem precisar aparecer. Só baixar, editar, postar e faturar!
-        </h2>
+        <h1>Faça Renda Extra em Dólar com os Vídeos da Trupe no Discord!</h1>
+        <h2>📱 Sem precisar aparecer. Só baixar, editar, postar e faturar!</h2>
         <iframe
           src="https://www.youtube.com/embed/yHRz9SHBhiU"
           title="YouTube video player"
@@ -722,9 +694,10 @@
       </div>
     </section>
 
-    <!-- SEÇÃO 5: ACESSO A TUDO -->
-    <section id="acesso" class="fifth-section animate">
-      <div class="fifth-content">
+    <!-- SEÇÃO UNIFICADA: ACESSO + OFERTA E TESTE GRÁTIS -->
+    <section id="acesso" class="unified-section animate">
+      <div class="unified-content">
+        <!-- Conteúdo da antiga SEÇÃO 5 (Acesso) -->
         <h2>Tudo o que você vai destravar dentro da comunidade:</h2>
         <div class="cards-container">
           <div class="card">
@@ -764,37 +737,35 @@
         </p>
         <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
         <div class="cta-note">100% grátis – vagas limitadas!</div>
-      </div>
-    </section>
 
-    <!-- SEÇÃO 7: OFERTA E TESTE GRÁTIS -->
-    <section class="seventh-section animate">
-      <div class="seventh-content">
-        <div class="offer-box">
-          <h2>Só hoje!</h2>
-          <p class="offer-description">
-            Descubra o segredo para transformar clipes em dinheiro (no mínimo R$15 mil por mês)!<br />
-            Use seu celular e transforme diversão em renda.
-          </p>
-          <p class="offer-price">
-            <span class="offer-old-price">De R$ 49,90</span> por <strong>R$ 0,00</strong>
-          </p>
-          <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
-          <div class="cta-note">100% grátis – vagas limitadas!</div>
-        </div>
-        <div class="offer-box">
-          <h2>Premiação Imperdível!</h2>
-          <p class="offer-description">
-            Participe da Trupe do Bilas e concorra a prêmios incríveis enquanto aprende a faturar com clipes!
-          </p>
-          <div class="offer-price">
-            🏆 <strong>Premiação Final:</strong> R$ 8.850,00<br />
-            💰 <strong>Premiação Diária:</strong> R$ 6.500,00<br />
-            🎟️ <strong>Sorteio Diário:</strong> R$ 1.050,00<br />
-            🤝 <strong>Premiação por Indicação:</strong> R$ 5,00 por indicado
+        <!-- Conteúdo da antiga SEÇÃO 7 (Ofertas) -->
+        <div class="seventh-content">
+          <div class="offer-box">
+            <h2>Só hoje!</h2>
+            <p class="offer-description">
+              Descubra o segredo para transformar clipes em dinheiro (no mínimo R$15 mil por mês)!<br />
+              Use seu celular e transforme diversão em renda.
+            </p>
+            <p class="offer-price">
+              <span class="offer-old-price">De R$ 49,90</span> por <strong>R$ 0,00</strong>
+            </p>
+            <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
+            <div class="cta-note">100% grátis – vagas limitadas!</div>
           </div>
-          <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
-          <div class="cta-note">100% grátis – vagas limitadas!</div>
+          <div class="offer-box">
+            <h2>Premiação Imperdível!</h2>
+            <p class="offer-description">
+              Participe da Trupe do Bilas e concorra a prêmios incríveis enquanto aprende a faturar com clipes!
+            </p>
+            <div class="offer-price">
+              🏆 <strong>Premiação Final:</strong> R$ 8.850,00<br />
+              💰 <strong>Premiação Diária:</strong> R$ 6.500,00<br />
+              🎟️ <strong>Sorteio Diário:</strong> R$ 1.050,00<br />
+              🤝 <strong>Premiação por Indicação:</strong> R$ 5,00 por indicado
+            </div>
+            <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
+            <div class="cta-note">100% grátis – vagas limitadas!</div>
+          </div>
         </div>
       </div>
     </section>
@@ -894,7 +865,6 @@
           },
           { threshold: 0.1 }
         );
-
         animElements.forEach((el) => observer.observe(el));
       });
 
