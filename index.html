@@ -148,93 +148,87 @@
         transform: translateY(0);
       }
 
-  /* =========================== */
-/* SEÇÃO 1: HERO (Fundo Preto, Conteúdo Centralizado) */
-/* =========================== */
-.hero-section {
-  position: relative;
-  /* Fundo preto como fallback + imagem */
-  background-color: #000;
-  background-image: url("https://i.imgur.com/fuHKSdB.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Conteúdo centralizado */
-  padding: 5rem 2rem 2rem 2rem;
-}
-
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
-  opacity: 0;
-  animation: fadeInOverlay 1s forwards;
-}
-@keyframes fadeInOverlay {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center; /* Texto centralizado */
-  max-width: 600px;
-  animation: slideIn 1s ease-out forwards;
-}
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(50px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-.hero-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-content h2 {
-  font-size: 1.5rem;
-  font-weight: normal;
-  margin-bottom: 1rem;
-  color: var(--accent-color);
-}
-
-.hero-content iframe {
-  width: 100%;
-  max-width: 800px;
-  height: 450px;
-  margin: 1rem auto;
-  display: block;
-  border: none;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  line-height: 1.4;
-  margin-bottom: 2rem;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .hero-content h1 { font-size: 2rem; }
-  .hero-content h2 { font-size: 1.3rem; }
-  .hero-content p { font-size: 1rem; }
-}
       /* =========================== */
-      /* SEÇÃO UNIFICADA (2, 3 e 1.6) COM A IMAGEM DE FUNDO DA SEÇÃO 1 ORIGINAL */
+      /* SEÇÃO 1: HERO (Fundo Preto, Conteúdo Centralizado) */
+      /* =========================== */
+      .hero-section {
+        position: relative;
+        /* Fundo preto como fallback + imagem */
+        background-color: #000;
+        background-image: url("https://i.imgur.com/fuHKSdB.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Conteúdo centralizado */
+        padding: 5rem 2rem 2rem 2rem;
+      }
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        animation: fadeInOverlay 1s forwards;
+      }
+      @keyframes fadeInOverlay {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center; /* Texto centralizado */
+        max-width: 600px;
+        animation: slideIn 1s ease-out forwards;
+      }
+      @keyframes slideIn {
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .hero-content h2 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        margin-bottom: 1rem;
+        color: var(--accent-color);
+      }
+      .hero-content iframe {
+        width: 100%;
+        max-width: 800px;
+        height: 450px;
+        margin: 1rem auto;
+        display: block;
+        border: none;
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+      }
+      /* Responsivo */
+      @media (max-width: 768px) {
+        .hero-content h1 { font-size: 2rem; }
+        .hero-content h2 { font-size: 1.3rem; }
+        .hero-content p { font-size: 1rem; }
+      }
+
+      /* =========================== */
+      /* SEÇÃO UNIFICADA (1.6, 2 e 3) COM A IMAGEM DE FUNDO DA SEÇÃO 1 ORIGINAL */
       /* =========================== */
       .unified-bg {
         position: relative;
-        /* Aqui aplicamos a mesma imagem de fundo da antiga seção 1 */
+        /* Utiliza a imagem de fundo da antiga seção 1 */
         background: url("https://i.imgur.com/4PEx7KN.jpeg") no-repeat center center;
         background-size: cover;
         background-attachment: fixed;
@@ -257,21 +251,18 @@
         margin: 0 auto;
       }
 
-      /* Ajustes das três seções internas (Como Funciona / Simple / Target) */
-      .how-section,
-      .simple-section,
-      .target-section {
+      /* COMO FUNCIONA (Seção 1.6) - Mantém texto centralizado */
+      .how-section {
         background: none; /* remove background individual */
-        padding: 3rem 0;  /* dá espaço vertical */
+        padding: 3rem 0;
         text-align: center;
       }
-      /* “Como Funciona?” */
       .how-content {
         max-width: 800px;
         margin: 0 auto;
         font-size: 1.1rem;
         line-height: 1.6;
-        color: #fff; /* texto branco */
+        color: #fff;
       }
       .how-content ul {
         list-style: none;
@@ -285,11 +276,16 @@
         margin-right: 0.5rem;
       }
 
-      /* “Você não precisa ser expert...” (Simple Section) */
+      /* VOCÊ NÃO PRECISA SER EXPERT... (Seção 2) - Texto à esquerda, com padding */
+      .simple-section {
+        background: none; /* remove background individual */
+        padding: 3rem 0;
+      }
       .simple-content {
         max-width: 800px;
         margin: 0 auto;
-        text-align: center;
+        text-align: left; /* Alinha à esquerda */
+        padding: 0 2rem;  /* Espaço lateral para evitar que o texto encoste na margem */
         color: #fff;
       }
       .simple-box {
@@ -305,11 +301,16 @@
         line-height: 1.5;
       }
 
-      /* “Para quem são as Clipadas da Trupe?” (Target Section) */
+      /* PARA QUEM SÃO AS CLIPADAS DA TRUPE? (Seção 3) - Texto à direita, com padding */
+      .target-section {
+        background: none; /* remove background individual */
+        padding: 3rem 0;
+      }
       .target-content {
         max-width: 800px;
         margin: 0 auto;
-        text-align: center;
+        text-align: right; /* Alinha à direita */
+        padding: 0 2rem;   /* Espaço lateral */
         color: #fff;
       }
       .target-content h2 {
@@ -340,7 +341,7 @@
       }
 
       /* =========================== */
-      /* SEÇÃO UNIFICADA (5 & 7)    */
+      /* SEÇÃO UNIFICADA (5 & 7) - ACESSO + OFERTA */
       /* =========================== */
       .unified-section {
         position: relative;
@@ -473,7 +474,7 @@
       }
 
       /* =========================== */
-      /* SEÇÃO 8: FAQ               */
+      /* SEÇÃO 8: FAQ */
       /* =========================== */
       .faq-section {
         background: #fff;
@@ -544,7 +545,7 @@
       }
 
       /* =========================== */
-      /* SEÇÃO 9: FORMULÁRIO        */
+      /* SEÇÃO 9: FORMULÁRIO */
       /* =========================== */
       .form-section {
         padding: 4rem 2rem;
@@ -587,7 +588,7 @@
       <a href="#formulario" class="btn btn--pulse">Inscreva-se Agora</a>
     </div>
 
-    <!-- SEÇÃO 1: HERO (Fundo preto, conteúdo centralizado) -->
+    <!-- SEÇÃO 1: HERO (Fundo Preto, Conteúdo Centralizado) -->
     <section id="hero" class="hero-section animate">
       <div class="hero-content">
         <h1>Faça Renda Extra em Dólar com os Vídeos da Trupe no Discord!</h1>
@@ -611,10 +612,10 @@
       </div>
     </section>
 
-    <!-- SEÇÕES 1.6, 2, 3 unificadas com o antigo fundo da seção 1 -->
+    <!-- SEÇÕES 1.6, 2, 3 UNIFICADAS COM A IMAGEM DE FUNDO DA SEÇÃO 1 ORIGINAL -->
     <section class="unified-bg animate">
       <div class="unified-wrapper">
-        <!-- COMO FUNCIONA -->
+        <!-- COMO FUNCIONA (Seção 1.6) -->
         <section id="como-funciona" class="how-section">
           <div class="how-content">
             <h2>Como Funciona?</h2>
@@ -627,7 +628,7 @@
           </div>
         </section>
 
-        <!-- VOCÊ NÃO PRECISA SER EXPERT... -->
+        <!-- VOCÊ NÃO PRECISA SER EXPERT... (Seção 2) -->
         <section class="simple-section">
           <div class="simple-content">
             <h2>Você não precisa ser expert (nem aparecer) pra começar a lucrar!</h2>
@@ -646,7 +647,7 @@
           </div>
         </section>
 
-        <!-- PARA QUEM SÃO AS CLIPADAS DA TRUPE? -->
+        <!-- PARA QUEM SÃO AS CLIPADAS DA TRUPE? (Seção 3) -->
         <section class="target-section">
           <div class="target-content">
             <h2>Para quem são as Clipadas da Trupe?</h2>
