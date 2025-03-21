@@ -89,7 +89,7 @@
           box-shadow: 0 0 0 0 rgba(60, 189, 81, 0);
         }
       }
-      /* Nota de apoio */
+      /* Nota de apoio para CTAs */
       .cta-note {
         font-size: 0.9rem;
         color: #ffdc00;
@@ -146,7 +146,7 @@
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
       }
-      /* Subtítulo com proposta de valor */
+      /* Subtítulo com a proposta de valor clara */
       .hero-content h2 {
         font-size: 1.5rem;
         font-weight: normal;
@@ -194,6 +194,31 @@
       }
       .about-content p {
         margin-bottom: 1rem;
+      }
+      /* =========================== */
+      /* SEÇÃO 1.6: COMO FUNCIONA   */
+      /* =========================== */
+      .how-section {
+        background: var(--background);
+        padding: 3rem 2rem;
+        text-align: center;
+      }
+      .how-content {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+      .how-content ul {
+        list-style: none;
+        padding: 0;
+      }
+      .how-content li {
+        margin: 1rem 0;
+      }
+      .how-content li::before {
+        content: "✔️";
+        margin-right: 0.5rem;
       }
       /* =========================== */
       /* SEÇÃO 2: SIMPLES SECTION   */
@@ -708,9 +733,22 @@
           Já ouviu falar da Trupe do Bilas? Somos uma comunidade de criadores que transforma clipes divertidos e memes em oportunidades reais de faturar.
         </p>
         <p>
-          Se você é fã de Twitch, curte o universo dos memes e quer descobrir um jeito prático e sem enrolação de ganhar dinheiro, aqui você aprende tudo com uma linguagem que fala a sua língua!
+          Trupe do Bilas é o canal de humor viral do Bilas, com milhões de views – agora, queremos ajudar você a lucrar também!
         </p>
         <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 1.6: COMO FUNCIONA -->
+    <section class="how-section">
+      <div class="how-content">
+        <h2>Como Funciona?</h2>
+        <ul>
+          <li>Entre na comunidade grátis e tenha acesso imediato ao treinamento;</li>
+          <li>Aprenda a repostar cortes dos vídeos virais do Bilas;</li>
+          <li>Monetize seus vídeos no YouTube/TikTok e ganhe dinheiro em dólar;</li>
+          <li>Participe de concursos diários com prêmios em dinheiro.</li>
+        </ul>
       </div>
     </section>
 
@@ -825,6 +863,13 @@
       <p><img src="https://via.placeholder.com/120x60?text=Site+Seguro" alt="Site Seguro" /></p>
     </section>
 
+    <!-- SEÇÃO 5.2: DEPOIMENTOS -->
+    <section class="trust-section">
+      <h2>Depoimentos</h2>
+      <p>"Comecei a usar os métodos da Trupe e, em poucos meses, já estava faturando alto!" – <strong>João, 28 anos</strong></p>
+      <p>"Sempre tive receio de investir tempo online, mas a comunidade me mostrou o caminho de forma simples." – <strong>Maria, 25 anos</strong></p>
+    </section>
+
     <!-- SEÇÃO 6: TRANSFORMAÇÃO (IMAGEM DE FUNDO) -->
     <section class="sixth-section">
       <div class="sixth-content">
@@ -929,7 +974,7 @@
     <section id="formulario" class="form-section">
       <div class="form-content">
         <h2>Inscreva-se Agora</h2>
-        <h3>Complete abaixo para garantir seu acesso gratuito à comunidade!</h3>
+        <h3>Leva menos de 1 minuto para se inscrever – 100% gratuito!</h3>
         <form
           class="cta-form"
           action="https://script.google.com/macros/s/AKfycbyS5Es0edZ5MVcnlGXp6hIHDs7f63c0TZVnrUsp7GhySODdnMz8AMJKh0xdBGrDbbRA/exec"
@@ -953,14 +998,7 @@
             autocomplete="email"
             required
           />
-          <label for="whatsapp">WhatsApp</label>
-          <input
-            type="tel"
-            id="whatsapp"
-            name="whatsapp"
-            placeholder="Digite seu WhatsApp"
-            required
-          />
+          <!-- Campo de WhatsApp removido para simplificar o formulário -->
           <button type="submit" class="btn">Quero meu acesso GRÁTIS agora</button>
         </form>
         <p class="vagas-info">
