@@ -253,17 +253,18 @@
 
       /* COMO FUNCIONA (Seção 1.6) - Conteúdo alinhado à esquerda */
       .how-section {
-        background: none; /* remove background individual */
+        background: none;
         padding: 3rem 0;
       }
       .how-content {
         max-width: 800px;
-        margin: 0 auto;
-        padding-left:1rem;
+        /* Removendo o centramento: */
+        margin: 0;
+        padding: 0; /* Remove padding lateral */
         font-size: 1.1rem;
         line-height: 1.6;
         color: #fff;
-        text-align: left; /* Alinha o texto à esquerda */
+        text-align: left;
       }
       .how-content ul {
         list-style: none;
@@ -279,21 +280,21 @@
 
       /* VOCÊ NÃO PRECISA SER EXPERT... (Seção 2) - Texto à esquerda */
       .simple-section {
-        background: none; /* remove background individual */
+        background: none;
         padding: 3rem 0;
       }
       .simple-content {
         max-width: 800px;
-        margin: 0 auto;
-        text-align: left; /* Alinha à esquerda */
-        padding-left: 1rem;  /* Espaço lateral */
+        margin: 0;
+        padding: 0; /* Remove o padding lateral */
+        text-align: left;
         color: #fff;
       }
       .simple-box {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
-        padding-left: 1rem;
-        margin: 2rem auto;
+        padding: 1rem; /* Ajustado para remover excesso de padding */
+        margin: 2rem 0;
         max-width: 700px;
       }
       .simple-box p {
@@ -304,14 +305,14 @@
 
       /* PARA QUEM SÃO AS CLIPADAS DA TRUPE? (Seção 3) - Texto à esquerda */
       .target-section {
-        background: none; /* remove background individual */
+        background: none;
         padding: 3rem 0;
       }
       .target-content {
         max-width: 800px;
-        margin: 0 auto;
-        text-align: left; /* Alinha à esquerda */
-        padding-left: 1rem;
+        margin: 0;
+        padding: 0; /* Remove o padding lateral */
+        text-align: left;
         color: #fff;
       }
       .target-content h2 {
@@ -325,7 +326,7 @@
       }
       .target-list {
         list-style: none;
-        margin: 0 auto 2rem;
+        margin: 0 0 2rem 0;
         padding: 0;
         max-width: 600px;
         text-align: left;
