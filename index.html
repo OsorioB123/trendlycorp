@@ -89,11 +89,27 @@
           box-shadow: 0 0 0 0 rgba(60, 189, 81, 0);
         }
       }
-      /* Nota para reforçar a oferta */
+      /* Nota de apoio */
       .cta-note {
         font-size: 0.9rem;
         color: #ffdc00;
         margin-top: 0.5rem;
+      }
+      /* Botão fixo (sticky) para inscrição */
+      .fixed-cta {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+      }
+      /* Ícone de scroll-down na HERO */
+      .scroll-down {
+        margin-top: 1.5rem;
+      }
+      .scroll-down a {
+        color: var(--accent-color);
+        font-size: 2rem;
+        text-decoration: none;
       }
       /* =========================== */
       /* SEÇÃO 1: HERO              */
@@ -130,7 +146,7 @@
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
       }
-      /* Subtítulo que deixa clara a proposta de valor */
+      /* Subtítulo com proposta de valor */
       .hero-content h2 {
         font-size: 1.5rem;
         font-weight: normal;
@@ -415,6 +431,23 @@
         }
       }
       /* =========================== */
+      /* SEÇÃO 5.1: PROVA SOCIAL (Trust) */
+      /* =========================== */
+      .trust-section {
+        background: var(--secondary-bg);
+        padding: 2rem;
+        text-align: center;
+        color: var(--text-color);
+      }
+      .trust-section p {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+      .trust-section img {
+        max-width: 120px;
+        margin-top: 1rem;
+      }
+      /* =========================== */
       /* SEÇÃO 6: TRANSFORMAÇÃO (IMAGEM DE FUNDO) */
       /* =========================== */
       .sixth-section {
@@ -632,6 +665,11 @@
     </style>
   </head>
   <body>
+    <!-- Botão fixo (sticky) para inscrição -->
+    <div class="fixed-cta">
+      <a href="#formulario" class="btn btn--pulse">Inscreva-se Agora</a>
+    </div>
+
     <!-- SEÇÃO 1: HERO -->
     <section class="hero-section">
       <div class="hero-content">
@@ -655,6 +693,10 @@
         </p>
         <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
         <div class="cta-note">100% grátis – vagas limitadas!</div>
+        <!-- Ícone de scroll para indicar que há mais conteúdo abaixo -->
+        <div class="scroll-down">
+          <a href="#formulario"><i class="fas fa-chevron-down"></i></a>
+        </div>
       </div>
     </section>
 
@@ -775,6 +817,12 @@
         <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
         <div class="cta-note">100% grátis – vagas limitadas!</div>
       </div>
+    </section>
+
+    <!-- SEÇÃO 5.1: PROVA SOCIAL -->
+    <section class="trust-section">
+      <p><strong>+5.000 inscritos</strong> e contando!</p>
+      <p><img src="https://via.placeholder.com/120x60?text=Site+Seguro" alt="Site Seguro" /></p>
     </section>
 
     <!-- SEÇÃO 6: TRANSFORMAÇÃO (IMAGEM DE FUNDO) -->
