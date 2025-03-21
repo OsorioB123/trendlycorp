@@ -244,11 +244,13 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
       }
+      /* Remova o centralização do wrapper para que o conteúdo fique alinhado à esquerda */
       .unified-wrapper {
         position: relative;
         z-index: 2;
         max-width: 1000px;
-        margin: 0 auto;
+        margin: 0;          /* Removido o "auto" para centralização */
+        padding-left: 2rem; /* Opcional: adiciona um pequeno espaçamento à esquerda */
       }
 
       /* COMO FUNCIONA (Seção 1.6) - Conteúdo alinhado à esquerda */
@@ -258,9 +260,8 @@
       }
       .how-content {
         max-width: 800px;
-        /* Removendo o centramento: */
         margin: 0;
-        padding: 0; /* Remove padding lateral */
+        padding: 0; /* Remove qualquer padding lateral */
         font-size: 1.1rem;
         line-height: 1.6;
         color: #fff;
@@ -286,14 +287,14 @@
       .simple-content {
         max-width: 800px;
         margin: 0;
-        padding: 0; /* Remove o padding lateral */
+        padding: 0;
         text-align: left;
         color: #fff;
       }
       .simple-box {
         background: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
-        padding: 1rem; /* Ajustado para remover excesso de padding */
+        padding: 1rem;
         margin: 2rem 0;
         max-width: 700px;
       }
@@ -311,7 +312,7 @@
       .target-content {
         max-width: 800px;
         margin: 0;
-        padding: 0; /* Remove o padding lateral */
+        padding: 0;
         text-align: left;
         color: #fff;
       }
