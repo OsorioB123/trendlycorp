@@ -4,21 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discord da Trupe</title>
-    
-    <!-- 
-      ======================== 
-      1. TAG DO GA4 INSERIDA  
-      ======================== 
-    -->
+    <meta
+      name="description"
+      content="Landing page para captar pessoas para o Discord da Trupe. Aprenda a ganhar dinheiro e monetizar seus cortes com nossa comunidade."
+    />
+    <meta
+      name="keywords"
+      content="Discord, Trupe, ganhar dinheiro, cortes, monetização, renda extra"
+    />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-28KN7QEY1X"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-28KN7QEY1X');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-28KN7QEY1X");
     </script>
-    
+
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -26,6 +31,17 @@
     />
 
     <style>
+      :root {
+        --primary-color: #3cbd51;
+        --primary-hover: #35aa47;
+        --background: #000;
+        --text-color: #fff;
+        --accent-color: #ff9900;
+        --secondary-bg: #111;
+        --border-color: rgba(255, 255, 255, 0.1);
+        --transition: 0.2s ease-in-out;
+        --box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
       /* Transição suave para scroll */
       html {
         scroll-behavior: smooth;
@@ -39,42 +55,29 @@
       body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-        background-color: #000;
-        color: #fff;
+        background-color: var(--background);
+        color: var(--text-color);
       }
-      /* =========================== */
-      /* Botões Comum - Voltados para Verde */
-      /* =========================== */
-      .cta-button,
-      .simple-button,
-      .target-button,
-      .fourth-button,
-      .fifth-button,
-      .sixth-button,
-      .seventh-button,
-      .faq-button {
+      /* Botão base unificado */
+      .btn {
         display: inline-block;
-        background: #3cbd51;
-        color: #fff;
+        background: var(--primary-color);
+        color: var(--text-color);
         padding: 1rem 2rem;
         border-radius: 8px;
         font-size: 1.2rem;
         font-weight: bold;
         text-decoration: none;
         cursor: pointer;
-        transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-        animation: pulse 2s infinite;
+        transition: transform var(--transition),
+          background var(--transition);
       }
-      .cta-button:hover,
-      .simple-button:hover,
-      .target-button:hover,
-      .fourth-button:hover,
-      .fifth-button:hover,
-      .sixth-button:hover,
-      .seventh-button:hover,
-      .faq-button:hover {
+      .btn:hover {
         transform: scale(1.05);
-        background: #35aa47;
+        background: var(--primary-hover);
+      }
+      .btn--pulse {
+        animation: pulse 2s infinite;
       }
       @keyframes pulse {
         0% {
@@ -87,57 +90,37 @@
           box-shadow: 0 0 0 0 rgba(60, 189, 81, 0);
         }
       }
-      /* Botão do formulário */
-      .btn-form {
-        display: inline-block;
-        background: #3cbd51;
-        color: #fff;
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-decoration: none;
-        cursor: pointer;
-        transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
-      }
-      .btn-form:hover {
-        transform: scale(1.05);
-        background: #35aa47;
-      }
       /* =========================== */
       /* SEÇÃO 1: HERO              */
       /* =========================== */
-     .hero-section {
-  position: relative;
-  background: url("https://i.imgur.com/3UKVfWJ.jpeg") no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
+      .hero-section {
+        position: relative;
+        background: url("https://i.imgur.com/3UKVfWJ.jpeg") no-repeat center center;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
       }
-      /* Estilização do vídeo com tamanho aumentado */
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
       .hero-content iframe {
         width: 100%;
         max-width: 800px;
@@ -177,7 +160,7 @@
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
-        color: #fff;
+        color: var(--text-color);
       }
       .simple-content h2 {
         font-size: 2rem;
@@ -189,7 +172,7 @@
         border-radius: 8px;
         padding: 2rem;
         margin-bottom: 2rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--box-shadow);
       }
       .simple-box p {
         margin-bottom: 1rem;
@@ -223,12 +206,12 @@
       .target-content h2 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
-        color: #ff9900;
+        color: var(--accent-color);
       }
       .target-content p {
         font-size: 1.2rem;
         margin-bottom: 2rem;
-        color: #fff;
+        color: var(--text-color);
       }
       .target-list {
         list-style: none;
@@ -269,7 +252,7 @@
       .fourth-content h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
-        color: #ff9900;
+        color: var(--accent-color);
       }
       .fourth-subtitle {
         font-size: 1.2rem;
@@ -285,7 +268,7 @@
       .fourth-box {
         background: rgba(255, 255, 255, 0.1);
         border: 1px solid rgba(255, 255, 255, 0.3);
-        border-left: 5px solid #ff9900;
+        border-left: 5px solid var(--accent-color);
         border-radius: 12px;
         padding: 2.5rem;
         margin: 2rem auto;
@@ -315,7 +298,7 @@
       /* SEÇÃO 5: ACESSO A TUDO      */
       /* =========================== */
       .fifth-section {
-        background: #000;
+        background: var(--background);
         padding: 4rem 2rem;
         text-align: center;
       }
@@ -326,7 +309,7 @@
       .fifth-content h2 {
         font-size: 2rem;
         margin-bottom: 2rem;
-        color: #ff9900;
+        color: var(--accent-color);
       }
       .cards-container {
         display: flex;
@@ -336,22 +319,23 @@
         margin-bottom: 2rem;
       }
       .card {
-        background: #111;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--secondary-bg);
+        border: 1px solid var(--border-color);
         border-radius: 8px;
         padding: 1.5rem;
         flex: 1 1 220px;
         max-width: 250px;
         text-align: left;
-        transition: transform 0.2s, box-shadow 0.2s;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transition: transform var(--transition),
+          box-shadow var(--transition);
+        box-shadow: var(--box-shadow);
       }
       .card:hover {
         transform: translateY(-5px);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
       }
       .card h3 {
-        color: #ff9900;
+        color: var(--accent-color);
         margin-bottom: 0.5rem;
         font-size: 1.3rem;
       }
@@ -365,7 +349,7 @@
       }
       .fifth-subtitle {
         font-size: 1.5rem;
-        color: #fff;
+        color: var(--text-color);
         margin-bottom: 1rem;
       }
       .fifth-text {
@@ -423,7 +407,7 @@
       .sixth-content h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
-        color: #ff9900;
+        color: var(--accent-color);
       }
       .sixth-content p {
         margin-bottom: 1rem;
@@ -455,7 +439,7 @@
       /* SEÇÃO 7: OFERTA E TESTE GRÁTIS */
       /* =========================== */
       .seventh-section {
-        background: #000;
+        background: var(--background);
         padding: 4rem 2rem;
         text-align: center;
       }
@@ -468,13 +452,13 @@
         justify-content: center;
       }
       .offer-box {
-        background: #111;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--secondary-bg);
+        border: 1px solid var(--border-color);
         border-radius: 12px;
         padding: 2rem;
         flex: 1 1 300px;
         max-width: 400px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        box-shadow: var(--box-shadow);
       }
       .offer-box h2 {
         color: #ff3300;
@@ -495,7 +479,6 @@
         color: #ff5555;
         font-weight: normal;
       }
-      /* Caixa de Premiação da Trupe do Bilas (ex.: outro .offer-box se quisesse) */
       @media (max-width: 768px) {
         .seventh-content {
           flex-direction: column;
@@ -528,7 +511,7 @@
       .faq-content h2 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
-        color: #ff9900;
+        color: var(--accent-color);
         text-align: center;
       }
       .faq-subtitle {
@@ -537,39 +520,29 @@
         text-align: center;
         color: #555;
       }
-      .faq-item {
+      .faq-item details {
         border: 1px solid #ccc;
         border-radius: 8px;
         margin-bottom: 1rem;
         overflow: hidden;
       }
-      .faq-question {
+      .faq-item summary {
         background: #000;
         color: #fff;
-        width: 100%;
         padding: 1rem;
-        border: none;
-        text-align: left;
         font-size: 1rem;
         cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        list-style: none;
       }
-      .faq-icon {
-        font-size: 1.5rem;
-        margin-left: 1rem;
+      .faq-item summary::-webkit-details-marker {
+        display: none;
       }
       .faq-answer {
-        display: none;
         background: #fff;
         color: #000;
         padding: 1rem;
         line-height: 1.5;
         font-size: 1rem;
-      }
-      .faq-item.active .faq-answer {
-        display: block;
       }
       .faq-cta {
         text-align: center;
@@ -589,7 +562,7 @@
       .form-section {
         padding: 4rem 2rem;
         text-align: center;
-        background: #111;
+        background: var(--secondary-bg);
       }
       .form-content {
         max-width: 600px;
@@ -627,13 +600,14 @@
         <iframe
           src="https://www.youtube.com/embed/yHRz9SHBhiU"
           title="YouTube video player"
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
         <p>
-         Entre em nossa comunidade e aprenda DE GRAÇA como monetizar suas redes sociais, além de participar das competições com mais de R$15.000 em prêmios
+          Entre em nossa comunidade e aprenda <strong>DE GRAÇA</strong> como monetizar suas redes sociais, além de participar das competições com mais de R$15.000 em prêmios
         </p>
-        <a href="#formulario" class="cta-button">💵 Quero ganhar dinheiro!</a>
+        <a href="#formulario" class="btn btn--pulse">💵 Quero ganhar dinheiro!</a>
       </div>
     </section>
 
@@ -651,30 +625,24 @@
           </p>
           <p>Mas atenção: Vagas limitadas na comunidade exclusiva!</p>
         </div>
-        <a href="#formulario" class="simple-button">QUERO LUCRAR COM CORTES</a>
+        <a href="#formulario" class="btn btn--pulse">QUERO LUCRAR COM CORTES</a>
       </div>
     </section>
 
     <!-- SEÇÃO 3: LISTA COM EMOJIS -->
     <section class="target-section">
       <div class="target-content">
-        <h2>Para quem é as Clipadas da Trupe?</h2>
+        <h2>Para quem são as Clipadas da Trupe?</h2>
         <p>É para você que:</p>
         <ul class="target-list">
           <li>✅ Quer ganhar muita grana na internet apenas com o celular.</li>
-          <li>
-            ✅ Quer aprender do zero passo a passo para criar cortes monetizados.
-          </li>
-          <li>
-            ✅ Não acredita mais em gurus, vendedores de curso e mágicas que não funcionam.
-          </li>
-          <li>
-            ✅ Sempre quis ganhar grana com a internet, mas nunca começou.
-          </li>
+          <li>✅ Quer aprender do zero passo a passo para criar cortes monetizados.</li>
+          <li>✅ Não acredita mais em gurus, vendedores de curso e mágicas que não funcionam.</li>
+          <li>✅ Sempre quis ganhar grana com a internet, mas nunca começou.</li>
           <li>✅ Está cansado de perder tempo e quer começar a faturar.</li>
           <li>✅ Quer fazer mais de 15 mil reais todos os meses.</li>
         </ul>
-        <a href="#formulario" class="target-button">QUERO LUCRAR COM CORTES</a>
+        <a href="#formulario" class="btn btn--pulse">QUERO LUCRAR COM CORTES</a>
       </div>
     </section>
 
@@ -703,7 +671,7 @@
             Está pronto para mudar sua vida financeira? Garanta agora seu acesso 100% gratuito!
           </p>
         </div>
-        <a href="#formulario" class="fourth-button">QUERO LUCRAR COM CORTES</a>
+        <a href="#formulario" class="btn btn--pulse">QUERO LUCRAR COM CORTES</a>
       </div>
     </section>
 
@@ -712,33 +680,30 @@
       <div class="fifth-content">
         <h2>Se liga no que você vai ter acesso!</h2>
         <div class="cards-container">
-          <!-- Card 1 -->
           <div class="card">
             <h3><i class="fas fa-book-open"></i> Introdução</h3>
             <p>
               Uma explicação de como funciona a comunidade, onde você tem acesso às aulas e como falar com um mentor.
             </p>
           </div>
-          <!-- Card 2 -->
           <div class="card">
             <h3><i class="fas fa-cogs"></i> Método</h3>
             <p>
               Entenda como funcionam as competições de cortes e como ganhar dinheiro usando apenas o seu celular, sem precisar aparecer.
             </p>
           </div>
-          <!-- Card 3 -->
           <div class="card">
             <h3><i class="fas fa-route"></i> Passo a Passo</h3>
             <p>
               Veja as instruções dos moderadores de como criar seus cortes e aumentar seu lucro.
             </p>
           </div>
-          <!-- Card 4 -->
           <div class="card">
             <h3><i class="fas fa-lock-open"></i> Monetizando as Redes</h3>
-            <p>Tutorial de como usar as redes sociais para ganhar dinheiro.</p>
+            <p>
+              Tutorial de como usar as redes sociais para ganhar dinheiro.
+            </p>
           </div>
-          <!-- Card 5 -->
           <div class="card">
             <h3><i class="fas fa-money-bill-wave"></i> Lucrando com as Redes</h3>
             <p>
@@ -750,7 +715,7 @@
         <p class="fifth-text">
           Tenha acesso fácil, direto na palma da sua mão! E melhor, você só precisa de internet para começar a ter seus primeiros ganhos.
         </p>
-        <a href="#formulario" class="fifth-button">QUERO LUCRAR COM CORTES</a>
+        <a href="#formulario" class="btn btn--pulse">QUERO LUCRAR COM CORTES</a>
       </div>
     </section>
 
@@ -771,14 +736,13 @@
           Aqui você vai receber todas as ferramentas, estratégias e segredos para transformar cortes simples em uma fonte de renda de <strong>mais de R$15 mil todos os meses.</strong>
         </p>
         <span class="sixth-highlight">MAS SÓ DEPENDE DE VOCÊ!</span><br />
-        <a href="#formulario" class="sixth-button">QUERO LUCRAR COM CORTES AGORA!</a>
+        <a href="#formulario" class="btn btn--pulse">QUERO LUCRAR COM CORTES AGORA!</a>
       </div>
     </section>
 
     <!-- SEÇÃO 7: OFERTA E TESTE GRÁTIS -->
     <section class="seventh-section">
       <div class="seventh-content">
-        <!-- Caixa de Oferta -->
         <div class="offer-box">
           <h2>SOMENTE HOJE!</h2>
           <p class="offer-description">
@@ -788,10 +752,8 @@
           <p class="offer-price">
             <span class="offer-old-price">De R$ 49,90</span> por <strong>R$ 0,00</strong><br />
           </p>
-          <a href="#formulario" class="seventh-button">QUERO LUCRAR COM CORTES</a>
+          <a href="#formulario" class="btn btn--pulse">QUERO LUCRAR COM CORTES</a>
         </div>
-
-        <!-- Caixa de Premiação da Trupe do Bilas -->
         <div class="offer-box">
           <h2>PREMIAÇÃO IMPERDÍVEL!</h2>
           <p class="offer-description">
@@ -803,7 +765,7 @@
             🎟️ <strong>SORTEIO DIÁRIO:</strong> R$ 1.050,00<br />
             🤝 <strong>PREMIAÇÃO POR INDICAÇÃO:</strong> R$ 5,00 por indicado
           </div>
-          <a href="#formulario" class="seventh-button">QUERO PARTICIPAR AGORA!</a>
+          <a href="#formulario" class="btn btn--pulse">QUERO PARTICIPAR AGORA!</a>
         </div>
       </div>
     </section>
@@ -814,61 +776,44 @@
         <h2>FAQ</h2>
         <p class="faq-subtitle">Perguntas Frequentes</p>
 
-        <!-- FAQ Item 1 -->
         <div class="faq-item">
-          <button class="faq-question">
-            Quanto preciso pagar?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
+          <details>
+            <summary>Quanto preciso pagar?</summary>
+            <p class="faq-answer">
               O acesso é totalmente gratuito por tempo limitado. Não há taxas ocultas.
             </p>
-          </div>
+          </details>
         </div>
 
-        <!-- FAQ Item 2 -->
         <div class="faq-item">
-          <button class="faq-question">
-            E se eu nunca editei vídeos antes?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
+          <details>
+            <summary>E se eu nunca editei vídeos antes?</summary>
+            <p class="faq-answer">
               Não tem problema! Toda a comunidade foi construída para iniciantes, com vídeo aulas, tutoriais práticos e mentorias.
             </p>
-          </div>
+          </details>
         </div>
 
-        <!-- FAQ Item 3 -->
         <div class="faq-item">
-          <button class="faq-question">
-            Como ganho dinheiro com isso?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
+          <details>
+            <summary>Como ganho dinheiro com isso?</summary>
+            <p class="faq-answer">
               Você aprenderá estratégias para editar cortes e publicá-los em plataformas que pagam por visualizações, e terá acesso exclusivo às competições e premiações diárias.
             </p>
-          </div>
+          </details>
         </div>
 
-        <!-- FAQ Item 4 -->
         <div class="faq-item">
-          <button class="faq-question">
-            E se eu precisar de suporte?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>
+          <details>
+            <summary>E se eu precisar de suporte?</summary>
+            <p class="faq-answer">
               Dentro da comunidade da Trupe, você pode tirar dúvidas tanto com a equipe quanto com outros membros mais experientes.
             </p>
-          </div>
+          </details>
         </div>
 
-        <!-- CTA ao final do FAQ -->
         <div class="faq-cta">
-          <a href="#formulario" class="faq-button">QUERO LUCRAR COM CORTES</a>
+          <a href="#formulario" class="btn btn--pulse">QUERO LUCRAR COM CORTES</a>
         </div>
       </div>
     </section>
@@ -882,29 +827,33 @@
           action="https://script.google.com/macros/s/AKfycbyS5Es0edZ5MVcnlGXp6hIHDs7f63c0TZVnrUsp7GhySODdnMz8AMJKh0xdBGrDbbRA/exec"
           method="POST"
         >
+          <label for="nome">Nome</label>
           <input
             type="text"
+            id="nome"
             name="nome"
             placeholder="Digite seu nome"
             autocomplete="name"
             required
           />
+          <label for="email">E-mail</label>
           <input
             type="email"
+            id="email"
             name="email"
             placeholder="Digite seu e-mail"
             autocomplete="email"
             required
           />
+          <label for="whatsapp">WhatsApp</label>
           <input
             type="tel"
+            id="whatsapp"
             name="whatsapp"
             placeholder="Digite seu WhatsApp"
             required
           />
-          <button type="submit" class="btn-form">
-            Quero lucrar com cortes
-          </button>
+          <button type="submit" class="btn">Quero lucrar com cortes</button>
         </form>
         <p class="vagas-info">
           ⚠️ Vagas limitadas para garantir suporte. Aproveite!
@@ -912,66 +861,32 @@
       </div>
     </section>
 
-    <!-- Script para abrir/fechar FAQ (Accordion) -->
+    <!-- Script unificado para envio do formulário via AJAX -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const faqItems = document.querySelectorAll(".faq-item");
-        faqItems.forEach((item) => {
-          const questionBtn = item.querySelector(".faq-question");
-          questionBtn.addEventListener("click", () => {
-            faqItems.forEach((i) => {
-              if (i !== item) {
-                i.classList.remove("active");
-                i.querySelector(".faq-icon").textContent = "+";
-              }
-            });
-            item.classList.toggle("active");
-            const icon = item.querySelector(".faq-icon");
-            icon.textContent = item.classList.contains("active") ? "–" : "+";
-          });
-        });
-      });
-    </script>
-
-    <!-- 
-      Script para enviar o formulário via AJAX e redirecionar para o Discord.
-      AQUI INCLUÍMOS O DISPARO DO EVENTO "form_submit" NO GA4 
-    -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener("DOMContentLoaded", () => {
         const form = document.querySelector(".cta-form");
-        form.addEventListener("submit", function (event) {
-          event.preventDefault(); // Impede o envio padrão do formulário
-
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
           const formData = new FormData(form);
-
-          // Envia os dados para o Google Apps Script
-          fetch(form.action, {
-            method: "POST",
-            body: formData,
-          })
-            .then((response) => {
-              if (response.ok) {
-                // 
-                // 2. Dispara evento personalizado no GA4 
-                //    (você deverá marcar esse evento como conversão na interface do GA4).
-                //
-                gtag('event', 'form_submit', {
-                  event_category: 'engagement',
-                  event_label: 'Trupe do Bilas - LP',
-                  value: 1
-                });
-
-                // Redireciona após a confirmação do envio
-                window.location.href = "https://discord.gg/dagY39VREN";
-              } else {
-                alert("Erro ao enviar os dados.");
-              }
-            })
-            .catch((error) => {
-              console.error("Erro:", error);
-              alert("Erro ao enviar os dados.");
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: formData,
             });
+            if (response.ok) {
+              gtag("event", "form_submit", {
+                event_category: "engagement",
+                event_label: "Trupe do Bilas - LP",
+                value: 1,
+              });
+              window.location.href = "https://discord.gg/dagY39VREN";
+            } else {
+              alert("Erro ao enviar os dados.");
+            }
+          } catch (error) {
+            console.error("Erro:", error);
+            alert("Erro ao enviar os dados.");
+          }
         });
       });
     </script>
