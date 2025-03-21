@@ -39,7 +39,8 @@
         --text-color: #fff;
         --accent-color: #ff9900;
         --border-color: rgba(255, 255, 255, 0.1);
-        --transition: 0.2s ease-in-out;
+        /* Aumentado para 0.3s para transições mais suaves */
+        --transition: 0.3s ease-in-out;
         --box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
       /* Transição suave para scroll */
@@ -102,6 +103,13 @@
         right: 20px;
         z-index: 999;
       }
+      @media (max-width: 600px) {
+        .fixed-cta {
+          bottom: 10px;
+          right: 10px;
+          transform: scale(0.9);
+        }
+      }
       /* Ícone de scroll-down na HERO */
       .scroll-down {
         margin-top: 1.5rem;
@@ -133,6 +141,17 @@
         bottom: 0;
         background: rgba(0, 0, 0, 0.6);
         z-index: 1;
+        /* Efeito fade-in para o overlay */
+        opacity: 0;
+        animation: fadeInOverlay 1s forwards;
+      }
+      @keyframes fadeInOverlay {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
       }
       .hero-content {
         position: relative;
@@ -490,6 +509,8 @@
         bottom: 0;
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
+        opacity: 0;
+        animation: fadeInOverlay 1s forwards;
       }
       .sixth-content {
         position: relative;
@@ -619,6 +640,7 @@
         border-radius: 8px;
         margin-bottom: 1rem;
         overflow: hidden;
+        transition: all var(--transition);
       }
       .faq-item summary {
         background: #000;
@@ -627,9 +649,17 @@
         font-size: 1rem;
         cursor: pointer;
         list-style: none;
+        position: relative;
       }
-      .faq-item summary::-webkit-details-marker {
-        display: none;
+      /* Adicionado ícone de seta para indicar interatividade */
+      .faq-item details summary::after {
+        content: "\25BC";
+        position: absolute;
+        right: 1rem;
+        transition: transform 0.3s ease-in-out;
+      }
+      .faq-item details[open] summary::after {
+        transform: rotate(180deg);
       }
       .faq-answer {
         background: #fff;
