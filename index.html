@@ -31,7 +31,10 @@
     />
 
     <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       :root {
@@ -42,7 +45,6 @@
         --text-color: #fff;
         --accent-color: #ff9900;
         --border-color: rgba(255, 255, 255, 0.1);
-        /* Aumentado para 0.3s para transições mais suaves */
         --transition: 0.3s ease-in-out;
         --box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       }
@@ -133,52 +135,50 @@
       /* =========================== */
       /* SEÇÃO 1: HERO              */
       /* =========================== */
-    /* HERO SECTION ATUALIZADA */
-.hero-section {
-  position: relative;
-  background: url("https://i.imgur.com/GPfdh8E.png") no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; /* Texto vai para a direita */
-  padding: 2rem;
-}
+      .hero-section {
+        position: relative;
+        /* Ajuste o background-position conforme necessário para focar
+           a área desejada da imagem (ex.: 20% 20%, left center, etc.) */
+        background: url("https://i.imgur.com/GPfdh8E.png") no-repeat 20% 20%;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; /* Texto vai para a direita */
+        padding: 2rem;
+      }
 
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Overlay mais leve */
-  z-index: 1;
-  opacity: 0;
-  animation: fadeInOverlay 1s forwards;
-}
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* Overlay mais leve para destacar a imagem */
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        animation: fadeInOverlay 1s forwards;
+      }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: left;
-  max-width: 600px;
-  margin-left: auto;  /* "empurra" o bloco para a direita */
-  margin-right: 2rem; /* define espaço à direita */
-}
-
-@keyframes fadeInOverlay {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
+      @keyframes fadeInOverlay {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
 
       .hero-content {
         position: relative;
         z-index: 2;
-        /* Alinhamento do texto para a esquerda */
         text-align: left;
         max-width: 600px;
-        margin-left: 2rem;
+        /* Margens para “empurrar” o texto para a direita */
+        margin-left: auto;
+        margin-right: 2rem;
       }
 
       .hero-content h1 {
@@ -211,7 +211,8 @@
 
       @media (max-width: 768px) {
         .hero-content {
-          margin-left: 1rem;
+          margin-right: 1rem;
+          margin-left: 0; /* Ajuste no mobile para não “comer” a tela */
         }
         .hero-content h1 {
           font-size: 2rem;
@@ -223,6 +224,51 @@
           font-size: 1rem;
         }
       }
+    </style>
+  </head>
+  <body>
+    <!-- Botão fixo (sticky) para inscrição -->
+    <div class="fixed-cta">
+      <a href="#formulario" class="btn btn--pulse">Inscreva-se Agora</a>
+    </div>
+
+    <!-- SEÇÃO 1: HERO -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>
+          Faça Renda Extra em Dólar com os Vídeos da Trupe no Discord!
+        </h1>
+        <!-- Subtítulo com a proposta de valor clara -->
+        <h2>
+          📱 Sem precisar aparecer. Só baixar, editar, postar e faturar!
+        </h2>
+        <!-- Vídeo adicionado entre a headline e o parágrafo -->
+        <iframe
+          src="https://www.youtube.com/embed/yHRz9SHBhiU"
+          title="YouTube video player"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+        <p>
+          A Trupe do Bilas tá pagando pra quem clipa os vídeos mais insanos da internet.
+          Tudo acontece no Discord. Você entra, aprende o passo a passo, participa da competição e ganha por resultado.
+        </p>
+        <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
+        <div class="cta-note">100% grátis – vagas limitadas!</div>
+        <!-- Ícone de scroll para indicar que há mais conteúdo abaixo -->
+        <div class="scroll-down">
+          <a href="#formulario"><i class="fas fa-chevron-down"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
+      Continue com o restante do seu código (demais seções, 
+      formulário, scripts, etc.) normalmente abaixo...
+    -->
+  </body>
+</html>
 
       /* =========================== */
       /* SEÇÃO 1.6: COMO FUNCIONA   */
