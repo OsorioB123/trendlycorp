@@ -149,19 +149,15 @@
       }
 
       /* =========================== */
-      /* SEÇÃO 1: HERO              */
+      /* SEÇÃO 1: HERO (Fundo Preto, Conteúdo Centralizado) */
       /* =========================== */
       .hero-section {
         position: relative;
-        /* Ajuste para 95% do tamanho original */
-        background: url("https://i.imgur.com/HCZNy8X.png") no-repeat center center;
-        background-size: full;
-        background-attachment: fixed;
+        background: #000; /* Fundo preto */
         min-height: 100vh;
         display: flex;
         align-items: center;
-        /* Alinhar conteúdo à esquerda */
-        justify-content: flex-start;
+        justify-content: center; /* Conteúdo centralizado */
         padding: 5rem 2rem 2rem 2rem;
       }
       .hero-section::before {
@@ -183,10 +179,8 @@
       .hero-content {
         position: relative;
         z-index: 2;
-        text-align: left;
+        text-align: center; /* Texto centralizado */
         max-width: 600px;
-        /* Removido margin-left: auto; */
-        margin-right: 2rem;
         animation: slideIn 1s ease-out forwards;
       }
       @keyframes slideIn {
@@ -217,28 +211,54 @@
         margin-bottom: 2rem;
       }
       @media (max-width: 768px) {
-        .hero-content {
-          margin-right: 1rem;
-          margin-left: 0;
-        }
         .hero-content h1 { font-size: 2rem; }
         .hero-content h2 { font-size: 1.3rem; }
         .hero-content p { font-size: 1rem; }
       }
 
       /* =========================== */
-      /* SEÇÃO 1.6: COMO FUNCIONA   */
+      /* SEÇÃO UNIFICADA (2, 3 e 1.6) COM A IMAGEM DE FUNDO DA SEÇÃO 1 ORIGINAL */
       /* =========================== */
-      .how-section {
-        background: var(--background);
+      .unified-bg {
+        position: relative;
+        /* Aqui aplicamos a mesma imagem de fundo da antiga seção 1 */
+        background: url("https://i.imgur.com/GPfdh8E.png") no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
         padding: 3rem 2rem;
+      }
+      .unified-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+      .unified-wrapper {
+        position: relative;
+        z-index: 2;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      /* Ajustes das três seções internas (Como Funciona / Simple / Target) */
+      .how-section,
+      .simple-section,
+      .target-section {
+        background: none; /* remove background individual */
+        padding: 3rem 0;  /* dá espaço vertical */
         text-align: center;
       }
+      /* “Como Funciona?” */
       .how-content {
         max-width: 800px;
         margin: 0 auto;
         font-size: 1.1rem;
         line-height: 1.6;
+        color: #fff; /* texto branco */
       }
       .how-content ul {
         list-style: none;
@@ -252,72 +272,32 @@
         margin-right: 0.5rem;
       }
 
-      /* =========================== */
-      /* SEÇÃO 2: SIMPLES SECTION   */
-      /* =========================== */
-      .simple-section {
-        position: relative;
-        background: url("https://i.imgur.com/tFkQ2sZ.png") no-repeat center center;
-        background-size: cover;
-        background-attachment: fixed;
-        padding: 4rem 2rem;
-        overflow: hidden;
-      }
-      .simple-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-      }
+      /* “Você não precisa ser expert...” (Simple Section) */
       .simple-content {
-        position: relative;
-        z-index: 2;
         max-width: 800px;
         margin: 0 auto;
         text-align: center;
-        color: var(--text-color);
-      }
-      .simple-content h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
+        color: #fff;
       }
       .simple-box {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 8px;
         padding: 2rem;
-        margin-bottom: 2rem;
-        box-shadow: var(--box-shadow);
+        margin: 2rem auto;
+        max-width: 700px;
       }
       .simple-box p {
         margin-bottom: 1rem;
         font-size: 1rem;
         line-height: 1.5;
       }
-      @media (max-width: 768px) {
-        .simple-content h2 { font-size: 1.5rem; }
-        .simple-box p { font-size: 0.95rem; }
-      }
 
-      /* =========================== */
-      /* SEÇÃO 3: LISTA COM EMOJIS  */
-      /* =========================== */
-      .target-section {
-        position: relative;
-        background: url("https://i.imgur.com/2e4K8NG.png") no-repeat center center;
-        background-size: cover;
-        background-attachment: fixed;
-        padding: 4rem 2rem;
-        text-align: center;
-      }
+      /* “Para quem são as Clipadas da Trupe?” (Target Section) */
       .target-content {
-        position: relative;
-        z-index: 2;
         max-width: 800px;
         margin: 0 auto;
+        text-align: center;
+        color: #fff;
       }
       .target-content h2 {
         font-size: 2rem;
@@ -327,7 +307,6 @@
       .target-content p {
         font-size: 1.2rem;
         margin-bottom: 2rem;
-        color: var(--text-color);
       }
       .target-list {
         list-style: none;
@@ -595,7 +574,7 @@
       <a href="#formulario" class="btn btn--pulse">Inscreva-se Agora</a>
     </div>
 
-    <!-- SEÇÃO 1: HERO -->
+    <!-- SEÇÃO 1: HERO (Fundo preto, conteúdo centralizado) -->
     <section id="hero" class="hero-section animate">
       <div class="hero-content">
         <h1>Faça Renda Extra em Dólar com os Vídeos da Trupe no Discord!</h1>
@@ -619,53 +598,57 @@
       </div>
     </section>
 
-    <!-- SEÇÃO 1.6: COMO FUNCIONA -->
-    <section id="como-funciona" class="how-section animate">
-      <div class="how-content">
-        <h2>Como Funciona?</h2>
-        <ul>
-          <li>Entre gratuitamente no Discord e desbloqueie o acesso às aulas e vídeos virais da Trupe;</li>
-          <li>Aprenda passo a passo a editar cortes com seu celular — mesmo que nunca tenha feito isso antes;</li>
-          <li>Publique seus vídeos nas redes e comece a gerar receita em dólar;</li>
-          <li>Participe das competições da comunidade e ganhe prêmios em dinheiro todos os dias.</li>
-        </ul>
-      </div>
-    </section>
+    <!-- SEÇÕES 1.6, 2, 3 unificadas com o antigo fundo da seção 1 -->
+    <section class="unified-bg animate">
+      <div class="unified-wrapper">
+        <!-- COMO FUNCIONA -->
+        <section id="como-funciona" class="how-section">
+          <div class="how-content">
+            <h2>Como Funciona?</h2>
+            <ul>
+              <li>Entre gratuitamente no Discord e desbloqueie o acesso às aulas e vídeos virais da Trupe;</li>
+              <li>Aprenda passo a passo a editar cortes com seu celular — mesmo que nunca tenha feito isso antes;</li>
+              <li>Publique seus vídeos nas redes e comece a gerar receita em dólar;</li>
+              <li>Participe das competições da comunidade e ganhe prêmios em dinheiro todos os dias.</li>
+            </ul>
+          </div>
+        </section>
 
-    <!-- SEÇÃO 2: SIMPLES SECTION -->
-    <section class="simple-section animate">
-      <div class="simple-overlay"></div>
-      <div class="simple-content">
-        <h2>Você não precisa ser expert (nem aparecer) pra começar a lucrar!</h2>
-        <div class="simple-box">
-          <p>
-            Só precisa do seu celular e acesso à nossa comunidade no Discord.
-            Lá você baixa os vídeos da Trupe, segue o passo a passo dos tutoriais, edita os cortes e posta — tudo do seu jeito.
-          </p>
-          <p>
-            Transforme clipes virais em uma renda real com criatividade, estratégia e zero enrolação.
-            👉 As vagas são limitadas. Aproveite enquanto ainda está gratuito!
-          </p>
-        </div>
-        <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
-        <div class="cta-note">100% grátis – vagas limitadas!</div>
-      </div>
-    </section>
+        <!-- VOCÊ NÃO PRECISA SER EXPERT... -->
+        <section class="simple-section">
+          <div class="simple-content">
+            <h2>Você não precisa ser expert (nem aparecer) pra começar a lucrar!</h2>
+            <div class="simple-box">
+              <p>
+                Só precisa do seu celular e acesso à nossa comunidade no Discord.
+                Lá você baixa os vídeos da Trupe, segue o passo a passo dos tutoriais, edita os cortes e posta — tudo do seu jeito.
+              </p>
+              <p>
+                Transforme clipes virais em uma renda real com criatividade, estratégia e zero enrolação.
+                👉 As vagas são limitadas. Aproveite enquanto ainda está gratuito!
+              </p>
+            </div>
+            <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
+            <div class="cta-note">100% grátis – vagas limitadas!</div>
+          </div>
+        </section>
 
-    <!-- SEÇÃO 3: LISTA COM EMOJIS -->
-    <section class="target-section animate">
-      <div class="target-content">
-        <h2>Para quem são as Clipadas da Trupe?</h2>
-        <p>É para você que:</p>
-        <ul class="target-list">
-          <li>✅ Quer transformar o tempo no celular em renda real.</li>
-          <li>✅ Não tem experiência, mas quer aprender tudo do zero com apoio.</li>
-          <li>✅ Cansou de promessas falsas e quer algo que realmente funciona.</li>
-          <li>✅ Sempre quis começar um projeto digital, mas nunca soube como.</li>
-          <li>✅ Gosta da ideia de ganhar grana com conteúdo, sem aparecer.</li>
-        </ul>
-        <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
-        <div class="cta-note">100% grátis – vagas limitadas!</div>
+        <!-- PARA QUEM SÃO AS CLIPADAS DA TRUPE? -->
+        <section class="target-section">
+          <div class="target-content">
+            <h2>Para quem são as Clipadas da Trupe?</h2>
+            <p>É para você que:</p>
+            <ul class="target-list">
+              <li>✅ Quer transformar o tempo no celular em renda real.</li>
+              <li>✅ Não tem experiência, mas quer aprender tudo do zero com apoio.</li>
+              <li>✅ Cansou de promessas falsas e quer algo que realmente funciona.</li>
+              <li>✅ Sempre quis começar um projeto digital, mas nunca soube como.</li>
+              <li>✅ Gosta da ideia de ganhar grana com conteúdo, sem aparecer.</li>
+            </ul>
+            <a href="#formulario" class="btn btn--pulse">Quero meu acesso GRÁTIS agora!</a>
+            <div class="cta-note">100% grátis – vagas limitadas!</div>
+          </div>
+        </section>
       </div>
     </section>
 
