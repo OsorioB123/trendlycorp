@@ -68,34 +68,6 @@
         color: var(--text-color);
       }
 
-      /* Navbar fixa */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 1000;
-      }
-      .navbar .logo {
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
-      .navbar .nav-links a {
-        color: var(--text-color);
-        text-decoration: none;
-        margin: 0 1rem;
-        font-weight: 600;
-        transition: color var(--transition);
-      }
-      .navbar .nav-links a:hover {
-        color: var(--accent-color);
-      }
-
       /* Botão base */
       .btn {
         display: inline-block;
@@ -379,7 +351,6 @@
         margin: 0 auto;
         color: var(--text-color);
       }
-      /* Mantém os estilos dos cards e ofertas */
       .cards-container {
         display: flex;
         flex-wrap: wrap;
@@ -603,18 +574,6 @@
     </style>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">Trupe do Bilas</div>
-      <div class="nav-links">
-        <a href="#hero">Início</a>
-        <a href="#como-funciona">Como Funciona</a>
-        <a href="#acesso">Acesso</a>
-        <a href="#faq">FAQ</a>
-        <a href="#formulario">Inscreva-se</a>
-      </div>
-    </nav>
-
     <!-- Botão fixo para inscrição -->
     <div class="fixed-cta">
       <a href="#formulario" class="btn btn--pulse">Inscreva-se Agora</a>
