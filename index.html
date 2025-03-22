@@ -244,13 +244,12 @@
         background: rgba(0, 0, 0, 0.5);
         z-index: 1;
       }
-      /* Remova o centralização do wrapper para que o conteúdo fique alinhado à esquerda */
       .unified-wrapper {
         position: relative;
         z-index: 2;
         max-width: 1000px;
-        margin: 0;          /* Removido o "auto" para centralização */
-        padding-left: 2rem; /* Opcional: adiciona um pequeno espaçamento à esquerda */
+        margin: 0;
+        padding-left: 2rem; /* Ajuste para alinhar mais à esquerda */
       }
 
       /* COMO FUNCIONA (Seção 1.6) - Conteúdo alinhado à esquerda */
@@ -261,7 +260,7 @@
       .how-content {
         max-width: 800px;
         margin: 0;
-        padding: 0; /* Remove qualquer padding lateral */
+        padding: 0;
         font-size: 1.1rem;
         line-height: 1.6;
         color: #fff;
@@ -352,19 +351,26 @@
         background-size: cover;
         background-attachment: fixed;
         padding: 4rem 2rem;
-        text-align: center;
+        /* Alinhando mais à direita */
+        text-align: right;
       }
       .unified-content {
         max-width: 1200px;
         margin: 0 auto;
         color: var(--text-color);
       }
+
+      /* Aumentar a distância entre o título e os blocos */
+      .unified-content h2 {
+        margin-bottom: 3rem; /* Ajuste conforme desejar */
+      }
+
       .cards-container {
         display: flex;
         flex-wrap: wrap;
         gap: 1.5rem;
-        justify-content: center;
-        margin-bottom: 2rem;
+        /* Empurrar os cards para a direita */
+        justify-content: flex-end;
       }
       .card {
         background: var(--secondary-bg);
@@ -373,6 +379,7 @@
         padding: 1.5rem;
         flex: 1 1 220px;
         max-width: 250px;
+        /* Mantém o texto do card alinhado à esquerda mesmo que o container esteja à direita */
         text-align: left;
         transition: transform var(--transition), box-shadow var(--transition);
         box-shadow: var(--box-shadow);
@@ -381,19 +388,23 @@
         transform: translateY(-5px) scale(1.02);
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
       }
+
+      /* Substituindo os ícones por emojis */
+      /* Exemplo de emojis para cada tópico: */
+      /* Introdução: 📖 | Método: ⚙️ | Passo a Passo: 🚀 | Monetizando: 📲 | Tenha Acesso às Competições: 🏆 */
+
+      /* Ajustes no texto dentro do card */
       .card h3 {
         color: var(--accent-color);
         margin-bottom: 0.5rem;
         font-size: 1.3rem;
-      }
-      .card h3 i {
-        margin-right: 0.5rem;
       }
       .card p {
         color: #ccc;
         font-size: 1rem;
         line-height: 1.4;
       }
+
       .fifth-subtitle {
         font-size: 1.5rem;
         color: var(--text-color);
@@ -409,11 +420,11 @@
       @media (max-width: 768px) {
         .cards-container {
           flex-direction: column;
-          align-items: center;
+          align-items: flex-end; /* para manter à direita no mobile */
         }
         .card {
           max-width: 100%;
-          text-align: center;
+          margin-right: 0;
         }
         .card h3 {
           font-size: 1.2rem;
@@ -429,7 +440,8 @@
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
-        justify-content: center;
+        /* Empurrar o box de oferta para a direita também */
+        justify-content: flex-end;
         margin-top: 2rem;
       }
       .offer-box {
@@ -440,6 +452,7 @@
         flex: 1 1 300px;
         max-width: 400px;
         box-shadow: var(--box-shadow);
+        text-align: left; /* texto interno do box fica à esquerda */
       }
       .offer-box h2 {
         color: #ff3300;
@@ -463,7 +476,7 @@
       @media (max-width: 768px) {
         .seventh-content {
           flex-direction: column;
-          align-items: center;
+          align-items: flex-end;
         }
         .offer-box {
           max-width: 100%;
@@ -675,34 +688,35 @@
         <!-- Acesso -->
         <h2>Tudo o que você vai destravar dentro da comunidade:</h2>
         <div class="cards-container">
+          <!-- Substituindo ícones por emojis e trocando o último título -->
           <div class="card">
-            <h3><i class="fas fa-book"></i> Introdução</h3>
+            <h3>📖 Introdução</h3>
             <p>
               Descubra como funciona a comunidade, onde ficam as aulas e como receber ajuda dos mentores.
             </p>
           </div>
           <div class="card">
-            <h3><i class="fas fa-cogs"></i> Método</h3>
+            <h3>⚙️ Método</h3>
             <p>
               Entenda como os clipes virais se transformam em renda. Aprenda o processo completo — do download à edição.
             </p>
           </div>
           <div class="card">
-            <h3><i class="fas fa-ladder"></i> Passo a Passo</h3>
+            <h3>🚀 Passo a Passo</h3>
             <p>
               Siga tutoriais práticos que mostram como criar seus próprios cortes que viralizam.
             </p>
           </div>
           <div class="card">
-            <h3><i class="fas fa-mobile-alt"></i> Monetizando as Redes</h3>
+            <h3>📲 Monetizando as Redes</h3>
             <p>
               Use o poder do YouTube, TikTok e Instagram para fazer seu conteúdo render dinheiro.
             </p>
           </div>
           <div class="card">
-            <h3><i class="fas fa-money-bill-wave"></i> Lucrando com as Redes</h3>
+            <h3>🏆 Tenha Acesso às Competições</h3>
             <p>
-              Aplique as estratégias certas pra transformar visualizações em uma grana real todo mês.
+              Participe dos desafios diários e concorra a prêmios em dinheiro, troféus e muito mais.
             </p>
           </div>
         </div>
